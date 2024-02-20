@@ -1,6 +1,8 @@
 const dummyApiResponse = {
     showLightAndDarkMode: true,
-    showTicTacToeBoard: true
+    showTicTacToeBoard: true,
+    showGithubProfileSearch: true,
+    showSearchAutocompleteWithApi: false
 };
 
 const featureFlagsDataServiceCall = () => {
