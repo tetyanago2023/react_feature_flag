@@ -11,19 +11,19 @@ const FeatureFlags = () => {
     const componentsToRender = [
         {
             key: "showLightAndDarkMode",
-            component: <LightDarkMode />,
+            component: <LightDarkMode key={"showLightAndDarkMode"}/>,
         },
         {
             key: "showTicTacToeBoard",
-            component: <TicTacToe />,
+            component: <TicTacToe key={"showTicTacToeBoard"}/>,
         },
         {
             key: "showSearchAutocompleteWithApi",
-            component: <SearchAutocompleteWithApi />,
+            component: <SearchAutocompleteWithApi key={"showSearchAutocompleteWithApi"}/>,
         },
         {
             key: "showGithubProfileSearch",
-            component: <GithubProfileSearch />,
+            component: <GithubProfileSearch key={"showGithubProfileSearch"}/>,
         },
     ];
 
