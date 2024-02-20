@@ -1,0 +1,59 @@
+:root {
+    --background-light: #ffffff;
+    --text-primary-light: #000;
+    --button-bg-light: #000;
+    --button-text-light: #ffffff;
+
+    --background-dark: #000000;
+    --text-primary-dark: #fff;
+    --button-bg-dark: #fff;
+    --button-text-dark: #000;
+}
+
+[data-theme="light"] {
+    --background: var(--background-light);
+    --text-primary: var(--text-primary-light);
+    --button-bg: var(--button-bg-light);
+    --button-text: var(--button-text-light);
+}
+
+[data-theme="dark"] {
+    --background: var(--background-dark);
+    --text-primary: var(--text-primary-dark);
+    --button-bg: var(--button-bg-dark);
+    --button-text: var(--button-text-dark);
+}
+
+.light-dark-mode {
+    background-color: var(--background);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+.light-dark-mode .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.light-dark-mode .container p {
+    color: var(--text-primary);
+    font-size: 40px;
+    margin: 0;
+}
+
+.light-dark-mode .container button {
+    background-color: var(--button-bg);
+    border: 1px solid var(--button-bg);
+    color: var(--button-text);
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}

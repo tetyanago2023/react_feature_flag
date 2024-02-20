@@ -10,26 +10,27 @@ export default function FeatureFlagGlobalState({ children }) {
 
 
     const fetchFeatureFlags = async () => {
-        setLoading(true);
+
         try {
+            setLoading(true);
             // Original service call
             const response = await featureFlagsDataServiceCall();
             console.log(response);
             // const data = await response.json();
             setEnabledFlags(response);
+            setLoading(false);
         } catch (e) {
             console.error(e);
+            setLoading(false);
             throw new Error('Failed to fetch feature flags');
         }
-        setLoading(false);
-
     }
     useEffect (() => {
         fetchFeatureFlags();
     }, []);
 
     return (
-        <FeatureFlagContext.Provider value={{ enabledFlags }}>
+        <FeatureFlagContext.Provider value={{ loading, enabledFlags }}>
             {children}
         </FeatureFlagContext.Provider>
     )
